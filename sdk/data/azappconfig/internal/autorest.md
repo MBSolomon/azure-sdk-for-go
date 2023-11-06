@@ -15,6 +15,25 @@ output-folder: generated
 openapi-type: "data-plane"
 security: "AADToken"
 use: "@autorest/go@4.0.0-preview.51"
+modelerfour:
+  lenient-model-deduplication: true
+```
+
+### Fix up parameter names
+```yaml
+# Directive renaming "KeyValueFields" value to "SettingFields".
+directive:
+- from: swagger-document
+  where: '$.paths.parameters.KeyValueFields'
+  transform: >
+    $.name = "SettingFields";
+#$["name"] = "SettingFields";
+#$["x-ms-client-name"] = "SettingFields";
+# Directive renaming references to KeyValueFields
+# - from: swagger-document
+#   where: '$.paths.*.*.parameters[?(@.$ref === "#/parameters/KeyValueFields")]'
+#   transform: >
+#     $.$ref = "#/parameters/SettingFields";
 ```
 
 ### Fix up pagers

@@ -1,0 +1,10 @@
+AutoRest code generation utility [cli version: 3.6.3; node: v12.22.9]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+info    |    Loading AutoRest core      '/home/msol/.autorest/@autorestcore@3.9.7/nodemodules/@autorest/core/dist' (3.9.7)
+info    |    Loading AutoRest extension '@autorest/go' (4.0.0-preview.51->4.0.0-preview.51)
+info    |    Loading AutoRest extension '@autorest/modelerfour' (4.23.1->4.23.1)
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | UsingTemporaryFlag | modelerfour.treat-type-object-as-anything options is a temporary flag. It WILL be removed in the future.
+warning | SecurityDefinedSpecAndConfig | OpenAPI spec has a security definition but autorest security config is defined. Security config from autorest will be used.
+info    | Autorest completed in 9.78s. 6 files generated.

@@ -141,7 +141,9 @@ func (c *Client) GetSetting(ctx context.Context, key string, options *GetSetting
 
 	var lastModified *time.Time
 	if resp.LastModified != nil {
-		tt, err := time.Parse(http.TimeFormat, *resp.LastModified)
+		lastModifiedStr := *resp.LastModified
+		lastModifiedStrFormatted := lastModifiedStr.Format(http.TimeFormat)
+		tt, err := time.Parse(http.TimeFormat, lastModifiedStrFormatted)
 		if err != nil {
 			return GetSettingResponse{}, err
 		}
